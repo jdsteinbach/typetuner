@@ -1,0 +1,26 @@
+// Set your breakpoints in a map:
+// Feel free to use any unit you like (px vs ems)
+$breakpoints: (
+	default: 20em,
+	medium: 37.5em,
+	large: 68em,
+	xlarge: 82em
+) !default;
+
+// Assign a base font-size for each breakpoint
+$bp-fs: (
+	default: 16px,
+	medium: 18px,
+	large: 21px,
+	xlarge: 23px
+) !default;
+
+// Assign a scale to each breakpoint.
+// NOTE: This is mobile first, so the first $scale will be assigned without a MQ.
+// Subsequent breakpoints will draw MQ values from $breakpoints map.
+$bp-scales: (
+  default: $hexatonic,
+  medium: $pentatonic,
+  large: $quad,
+  xlarge: $major-triad
+) !default;

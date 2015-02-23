@@ -1,0 +1,13 @@
+// Breakpoint MQ function
+@mixin bp($name) {
+  @if $name == 'default' {
+    @content;
+  } @else if not index(map-keys($breakpoints), $name) {
+    @warn "Invalid breakpoint `#{$name}`.";
+  }
+  @else {
+    @media (min-width: map-get($breakpoints, $name)) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+// Exponential Math
+@function power($x, $n) {
+    $return: 1;
+    @if $n > 0 {
+        @for $i from 1 through $n {
+            $return: $return * $x;
+        }
+    } @else if $n < 0 {
+        @for $i from $n to 0 {
+            $return: $return / $x;
+        }
+    }
+    @return $return;
+}

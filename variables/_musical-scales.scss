@@ -1,0 +1,37 @@
+// Size of a musical half-step
+$half: 466.16 / 440;
+
+// All the intervals in an octave
+$intervals: (
+	tonic: power($half, 0),
+	half: power($half, 1),
+	whole: power($half, 2),
+	mthird: power($half, 3),
+	third: power($half, 4),
+	fourth: power($half, 5),
+	afourth: power($half, 6),
+	fifth: power($half, 7),
+	msixth: power($half, 8),
+	sixth: power($half, 9),
+	mseventh: power($half, 10),
+	seventh: power($half, 11),
+	octave: power($half, 12)
+);
+
+// Common musical scales with 1-7 intervals
+$octave: ( tonic );
+$perfect-fourth: ( tonic, fourth );
+$tritone: ( tonic, afourth );
+$perfect-fifth: ( tonic, fifth );
+$major-triad: ( tonic, third, fifth );
+$minor-triad: ( tonic, mthird, fifth );
+$quad: ( tonic, mthird, afourth, sixth );
+$major-minor-seventh: ( tonic, third, fifth, mseventh );
+$pentatonic: ( tonic, whole, third, fifth, sixth );
+$hexatonic: ( tonic, whole, third, fourth, fifth, sixth );
+$whole-tone: ( tonic, whole, third, afourth, msixth, mseventh );
+$augmented: ( tonic, mthird, third, fifth, msixth, seventh );
+$blues: ( tonic, mthird, fourth, afourth, fifth, mseventh );
+$prometheus: ( tonic, whole, third, afourth, sixth, mseventh );
+$major-scale: ( tonic, whole, third, fourth, fifth, sixth, seventh );
+$minor-scale: ( tonic, whole, mthird, fourth, fifth, msixth, seventh );

@@ -1,0 +1,22 @@
+// Calculate font-size based on $fsize name & current $scale
+@function loop-pos($fs, $scale) {
+  $curr-size: index($fsizes, $fs);
+  $loop: 0;
+	@if $startsmall == true {
+		$curr-size: $curr-size - 1;
+		@if $curr-size == 0 {
+		  $loop: -1;
+		}
+	}
+	@while $curr-size > length($scale) {
+		$curr-size: $curr-size - length($scale);
+		$loop: $loop + 1;
+	}
+	@if $curr-size == 0 {
+	  $curr-size: length($scale);
+	}
+
+	$actual-font: rd( $main-font * power(2, $loop) * int( nth($scale, $curr-size) ) );
+
+	@return $actual-font;
+}
