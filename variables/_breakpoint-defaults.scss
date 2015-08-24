@@ -1,18 +1,18 @@
 // Set your breakpoints in a map:
 // Feel free to use any unit you like (px vs ems)
 $breakpoints: (
-	default: 20em,
-	medium: 37.5em,
-	large: 68em,
-	xlarge: 82em
+  default: 20em,
+  medium: 37.5em,
+  large: 68em,
+  xlarge: 82em
 ) !default;
 
 // Assign a base font-size for each breakpoint
 $bp-fs: (
-	default: 16px,
-	medium: 18px,
-	large: 21px,
-	xlarge: 23px
+  default: 16px,
+  medium: 18px,
+  large: 21px,
+  xlarge: 23px
 ) !default;
 
 // Assign a scale to each breakpoint.

@@ -1,24 +1,28 @@
 // Generate margin / padding based on baseline rhythm
 @mixin scale-space($type,$fs,$t:false,$r:false,$b:false,$l:false){
-	@each $bp, $scale in $bp-scales {
-		@include bp($bp) {
-			$actual-font: loop-pos($fs, $scale);
-			$calc-rhythm: $main-font * $rhythm;
-			$em-value: $calc-rhythm / $actual-font;
-			@if $t != false {
-				#{$type}-top: ( $t * $em-value ) * 1em;
-			}
-			@if $r != false {
-				#{$type}-right: ( $r * $em-value ) * 1em;
-			}
-			@if $b != false {
-				#{$type}-bottom: ( $b * $em-value ) * 1em;
-			}
-			@if $l != false {
-				#{$type}-left: ( $l * $em-value ) * 1em;
-			}
-		}
-	}
+  @each $bp, $scale in $bp-scales {
+    @include bp($bp) {
+      $actual-font: loop-pos($fs, $scale);
+      $calc-rhythm: $main-font * $rhythm;
+      $em-value: $calc-rhythm / $actual-font;
+
+      @if $t != false {
+        #{$type}-top: ( $t * $em-value ) * 1em;
+      }
+      
+      @if $r != false {
+        #{$type}-right: ( $r * $em-value ) * 1em;
+      }
+      
+      @if $b != false {
+        #{$type}-bottom: ( $b * $em-value ) * 1em;
+      }
+      
+      @if $l != false {
+        #{$type}-left: ( $l * $em-value ) * 1em;
+      }
+    }
+  }
 }
 
 // Alias for scale-space() with margin
