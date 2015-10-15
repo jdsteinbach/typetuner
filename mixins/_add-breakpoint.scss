@@ -1,0 +1,3 @@
+@mixin add-breakpoint($label, $width) {
+  $breakpoints: map-merge( $breakpoints, ($label: $width) );
+}
