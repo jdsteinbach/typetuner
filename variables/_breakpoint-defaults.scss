@@ -5,7 +5,7 @@ $breakpoints: (
   medium: 37.5em,
   large: 68em,
   xlarge: 82em
-) !default;
+) !default !global;
 
 // Assign a base font-size for each breakpoint
 $bp-fs: (
@@ -13,7 +13,7 @@ $bp-fs: (
   medium: 18px,
   large: 21px,
   xlarge: 23px
-) !default;
+) !default !global;
 
 // Assign a scale to each breakpoint.
 // NOTE: This is mobile first, so the first $scale will be assigned without a MQ.
@@ -23,4 +23,4 @@ $bp-scales: (
   medium: $pentatonic,
   large: $quad,
   xlarge: $major-triad
-) !default;
+) !default !global;

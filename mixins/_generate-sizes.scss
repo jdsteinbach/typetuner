@@ -1,8 +1,0 @@
-// Function to manually generate font sizes for a single $scale
-@mixin generate-sizes($scale) {
-  @each $fsize in $fsizes {
-    .font-#{$fsize} {
-      @include make-sizes($fsize, $scale);
-    }
-  }
-};

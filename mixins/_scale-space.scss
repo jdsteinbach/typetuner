@@ -1,5 +1,5 @@
 // Generate margin / padding based on baseline rhythm
-@mixin scale-space($type,$fs,$t:false,$r:false,$b:false,$l:false){
+@mixin scale-space($type, $fs, $t:false, $r:false, $b:false, $l:false) {
   @each $bp, $scale in $bp-scales {
     @include bp($bp) {
       $actual-font: loop-pos($fs, $scale);
@@ -7,30 +7,30 @@
       $em-value: $calc-rhythm / $actual-font;
 
       @if $t != false {
-        #{$type}-top: ( $t * $em-value ) * 1em;
+        #{$type}-top: ($t * $em-value) * 1em;
       }
-      
+
       @if $r != false {
-        #{$type}-right: ( $r * $em-value ) * 1em;
+        #{$type}-right: ($r * $em-value) * 1em;
       }
-      
+
       @if $b != false {
-        #{$type}-bottom: ( $b * $em-value ) * 1em;
+        #{$type}-bottom: ($b * $em-value) * 1em;
       }
-      
+
       @if $l != false {
-        #{$type}-left: ( $l * $em-value ) * 1em;
+        #{$type}-left: ($l * $em-value) * 1em;
       }
     }
   }
 }
 
 // Alias for scale-space() with margin
-@mixin scale-margin($fs,$t,$r,$b,$l){
-  @include scale-space('margin',$fs,$t,$r,$b,$l);
+@mixin scale-margin($fs, $t, $r, $b, $l) {
+  @include scale-space('margin', $fs, $t, $r, $b, $l);
 }
 
 // Alias for scale-space() with padding
-@mixin scale-padding($fs,$t,$r,$b,$l){
-  @include scale-space('padding',$fs,$t,$r,$b,$l);
+@mixin scale-padding($fs, $t, $r, $b, $l) {
+  @include scale-space('padding', $fs, $t, $r, $b, $l);
 }

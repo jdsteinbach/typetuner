@@ -1,12 +1,13 @@
 // Function to loop through all $fsizes, assign all necessary MQs for each
 @mixin resp-sizes() {
   @each $fsize in $fsizes {
-    @each $bp, $scale in $bp-scales {
+    @each $bp in $bp-sorted-list {
       $main-font: map-get($bp-fs, $bp) !global;
+      $this-bp-scale: map-get($bp-scales, $bp);
       @include bp($bp) {
         .font-#{$fsize},
         %#{$fsize} {
-          @include make-sizes($fsize, $scale);
+          @include make-sizes($fsize, $this-bp-scale);
         }
       }
     }

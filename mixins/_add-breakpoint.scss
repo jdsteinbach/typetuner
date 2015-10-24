@@ -1,3 +1,6 @@
-@mixin add-breakpoint($label, $width) {
-  $breakpoints: map-merge( $breakpoints, ($label: $width) );
+@mixin add-breakpoint($label, $width, $size, $scale) {
+  $breakpoints: map-merge($breakpoints, ($label: $width)) !global;
+  $bp-fs: map-merge($bp-fs, ($label: $size)) !global;
+  $bp-scales: map-merge($bp-scales, ($label: $scale)) !global;
+  $bp-sorted-list: map-sort($breakpoints) !global;
 }

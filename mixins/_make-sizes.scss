@@ -1,7 +1,7 @@
 // Function to assign a font-size & line-height to each label
 // in the $fsizes variable based on a chosen scale
-@mixin make-sizes($fs, $scale) {
-  $actual-font: loop-pos($fs, $scale);
+@mixin make-sizes($fs, $this-bp-scale) {
+  $actual-font: loop-pos($fs, $this-bp-scale);
   $line-height: $main-font / $actual-font * $rhythm;
   $lh: $line-height;
 
@@ -9,6 +9,6 @@
     $line-height: $line-height + ($lh / 2);
   }
 
-  @include fs($actual-font);
+  font-size: $actual-font;
   line-height: $line-height;
 }
