@@ -1,0 +1,10 @@
+@mixin remove-breakpoint($label) {
+  @if index($bp-sorted-list, $label) {
+    $breakpoints: map-remove($breakpoints, $label) !global;
+    $bp-fs: map-remove($bp-fs, $label) !global;
+    $bp-scales: map-remove($bp-scales, $label) !global;
+    $bp-sorted-list: map-sort($breakpoints) !global;
+  } @else {
+    @warn "Breakpoint `#{$label}` cannot be removed because it doesn't exist.";
+  }
+}
