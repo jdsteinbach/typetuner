@@ -1,0 +1,26 @@
+// Function to loop through all $fsizes, assign all necessary MQs for each
+@mixin type-tune($type: 'class') {
+  $selector: '.';
+  @if $type == 'extend' {
+    $selector: '%';
+  }
+
+  $bp-vertical-rhythm: ();
+  @each $k, $v in $breakpoints {
+    $vertical-rhythm: map-get($bp-font-size, $k) * map-get($bp-line-height, $k);
+    $bp-vertical-rhythm: map-merge($bp-vertical-rhythm, ($k: $vertical-rhythm));
+  }
+
+  @each $fsize in $fsizes {
+    @each $bp in $bp-sorted-list {
+      $main-font: map-get($bp-font-size, $bp) !global;
+      $main-vertical-rhythm: map-get($bp-vertical-rhythm, $bp) !global;
+      $this-bp-scale: sc(map-get($bp-scales, $bp));
+      @include bp($bp) {
+        #{$selector}tt-#{$fsize} {
+          @include make-sizes($fsize, $this-bp-scale);
+        }
+      }
+    }
+  }
+};

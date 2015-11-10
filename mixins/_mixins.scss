@@ -1,6 +1,7 @@
-@import 'generate-font-size';
+@import 'add-breakpoint';
+@import 'remove-breakpoint';
+@import 'set-hierarchy';
 @import 'make-sizes';
-@import 'scale-space';
-@import 'generate-sizes';
 @import 'bp';
-@import 'resp-sizes';
+@import 'type-tune';
+@import 'scale-space';

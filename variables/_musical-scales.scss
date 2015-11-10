@@ -19,19 +19,21 @@ $intervals: (
 );
 
 // Common musical scales with 1-7 intervals
-$octave: ( tonic );
-$perfect-fourth: ( tonic, fourth );
-$tritone: ( tonic, afourth );
-$perfect-fifth: ( tonic, fifth );
-$major-triad: ( tonic, third, fifth );
-$minor-triad: ( tonic, mthird, fifth );
-$quad: ( tonic, mthird, afourth, sixth );
-$major-minor-seventh: ( tonic, third, fifth, mseventh );
-$pentatonic: ( tonic, whole, third, fifth, sixth );
-$hexatonic: ( tonic, whole, third, fourth, fifth, sixth );
-$whole-tone: ( tonic, whole, third, afourth, msixth, mseventh );
-$augmented: ( tonic, mthird, third, fifth, msixth, seventh );
-$blues: ( tonic, mthird, fourth, afourth, fifth, mseventh );
-$prometheus: ( tonic, whole, third, afourth, sixth, mseventh );
-$major-scale: ( tonic, whole, third, fourth, fifth, sixth, seventh );
-$minor-scale: ( tonic, whole, mthird, fourth, fifth, msixth, seventh );
+$scales: (
+  octave: ( tonic ),
+  perfect-fourth: ( tonic, fourth ),
+  tritone: ( tonic, afourth ),
+  perfect-fifth: ( tonic, fifth ),
+  major-triad: ( tonic, third, fifth ),
+  minor-triad: ( tonic, mthird, fifth ),
+  quad: ( tonic, mthird, afourth, sixth ),
+  major-minor-seventh: ( tonic, third, fifth, mseventh ),
+  pentatonic: ( tonic, whole, third, fifth, sixth ),
+  hexatonic: ( tonic, whole, third, fourth, fifth, sixth ),
+  whole-tone: ( tonic, whole, third, afourth, msixth, mseventh ),
+  augmented: ( tonic, mthird, third, fifth, msixth, seventh ),
+  blues: ( tonic, mthird, fourth, afourth, fifth, mseventh ),
+  prometheus: ( tonic, whole, third, afourth, sixth, mseventh ),
+  major-scale: ( tonic, whole, third, fourth, fifth, sixth, seventh ),
+  minor-scale: ( tonic, whole, mthird, fourth, fifth, msixth, seventh )
+);

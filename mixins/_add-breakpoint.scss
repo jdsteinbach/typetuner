@@ -1,0 +1,7 @@
+@mixin add-breakpoint($label, $width, $size, $line-height, $scale) {
+  $breakpoints: map-merge($breakpoints, ($label: $width)) !global;
+  $bp-font-size: map-merge($bp-font-size, ($label: $size)) !global;
+  $bp-line-height: map-merge($bp-line-height, ($label: $line-height)) !global;
+  $bp-scales: map-merge($bp-scales, ($label: $scale)) !global;
+  $bp-sorted-list: map-sort($breakpoints) !global;
+}

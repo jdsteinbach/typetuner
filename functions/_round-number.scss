@@ -1,4 +1,4 @@
 // Round a number
-@function rd($num) {
-  @return round( $num * 10 ) / 10;
+@function rd($num, $decimal: 10) {
+  @return round( $num * $decimal ) / $decimal;
 }

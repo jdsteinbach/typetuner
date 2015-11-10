@@ -1,4 +1,0 @@
-// Turns a value into a font-size property
-@mixin fs($val) {
-  font-size: #{$val};
-}

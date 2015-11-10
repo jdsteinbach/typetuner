@@ -1,0 +1,4 @@
+// Get the distance between notes in an interval
+@function sc($name) {
+  @return map-get($scales, $name);
+}
