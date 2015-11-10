@@ -1,6 +1,6 @@
 @mixin set-hierarchy($list) {
   @if type-of($list) == list {
-    $fsizes: list;
+    $fsizes: $list !global;
   } @else {
     @warn "Please submit a valid Sass list to `set-hierarchy()`.";
   }
