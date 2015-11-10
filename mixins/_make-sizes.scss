@@ -2,13 +2,7 @@
 // in the $fsizes variable based on a chosen scale
 @mixin make-sizes($fs, $this-bp-scale) {
   $actual-font: loop-pos($fs, $this-bp-scale);
-  $line-height: round($actual-font / $main-vertical-rhythm) * $main-vertical-rhythm / $actual-font;
-  // $line-height: $main-vertical-rhythm / $actual-font;
-  // $lh: $line-height;
-
-  // @while $line-height < 1 {
-  //   $line-height: $line-height + ($lh / 2);
-  // }
+  $line-height: ceil($actual-font / $main-vertical-rhythm) * $main-vertical-rhythm / $actual-font;
 
   font-size: $actual-font;
   line-height: rd($line-height, 100);
