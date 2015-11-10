@@ -2,7 +2,7 @@
 @function loop-pos($fs, $scale) {
   $curr-size: index($fsizes, $fs);
   $loop: 0;
-  
+
   @if $startsmall == true {
     $curr-size: $curr-size - 1;
     @if $curr-size == 0 {
