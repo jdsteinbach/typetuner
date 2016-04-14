@@ -2,8 +2,10 @@
 @mixin scale-space($type, $fs, $t:false, $r:false, $b:false, $l:false) {
   @each $bp, $scale in $bp-scales {
     @include bp($bp) {
-      $actual-font: loop-pos($fs, $scale);
-      $calc-rhythm: $main-font * $rhythm;
+      $this-bp-scale: sc(map-get($bp-scales, $bp));
+      $actual-font: loop-pos($fs, $this-bp-scale);
+      $actual-rhythm: map-get($bp-line-height, $bp);
+      $calc-rhythm: $main-font * $actual-rhythm;
       $em-value: $calc-rhythm / $actual-font;
 
       @if $t != false {
