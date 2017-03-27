@@ -1,0 +1,28 @@
+{
+  "name": "TypeTuner",
+  "version": "1.0.0",
+  "homepage": "https://github.com/jdsteinbach/typetuner",
+  "authors": [
+    "jdsteinbach <jdsteinbach@gmail.com>"
+  ],
+  "description": "Effortless, Harmonious Type Sizing for Sass",
+  "main": "_typetuner.scss",
+  "moduleType": [],
+  "keywords": [
+    "Sass",
+    "typetuner",
+    "type",
+    "sizing",
+    "fonts",
+    "type",
+    "typeface"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
